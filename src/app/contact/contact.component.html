@@ -1,0 +1,125 @@
+<!-- Contact Section -->
+<section class="padding radical-background4">
+    <div class="container py-5">
+        <div class="row">
+            <div class="d-flex flex-wrap gap-3 col-sm-12 col-lg-6 align-items-center justify-content-around" data-aos="fade-right" data-aos-delay="200" data-aos-once="true">
+
+                <div class="col-sm-7 col-md-5 card border-0  bg-transparent  justify-content-center align-items-center p-3 rounded-5"
+                    [ngClass]="isDarkMode ? 'shadow-dark' : 'shadow-light'">
+                    <p class="fs-1"><i class="bi bi-geo-alt-fill text-center" style="height: 30px;"></i></p>
+                    <p class="text-uppercase fw-bold text-center" [ngClass]="isDarkMode ? 'text-white' : 'text-black'">LOCATION</p>
+                    <p class="text-secondary">Podujeva, Kosovo</p>
+
+                    <button class="btn btn-white border-3 rounded-0 "
+                    [ngClass]="isDarkMode ? 'text-white' : 'text-black'"
+                    [ngStyle]="{'border-bottom': isDarkMode ? 'solid #fff 2px' : 'solid #000 2px'}"
+                    > DOWNLOAD CV</button>
+
+                </div>
+
+                <div class="col-sm-7 col-md-5 card border-0  bg-transparent justify-content-center align-items-center p-3 rounded-5"
+                    [ngClass]="isDarkMode ? 'shadow-dark' : 'shadow-light'">
+                    <p class="fs-1" >
+                        <i class="bi bi-telephone-fill text-center" style="height: 40px;"></i>
+                    </p>
+                    <p class="text-uppercase fw-bold text-center" [ngClass]="isDarkMode ? 'text-white' : 'text-black'">PHONE NUMBER</p>
+                    <p class="text-secondary">+383 45 209 534</p>
+
+                    <button class="btn btn-white border-3 rounded-0 " [ngClass]="isDarkMode ? 'text-white' : 'text-black'"
+                    [ngStyle]="{'border-bottom': isDarkMode ? 'solid #fff 2px' : 'solid #000 2px'}"> BOOK A CALL</button>
+
+                </div>
+
+                <div class="col-sm-7 col-md-5 card border-0  bg-transparent justify-content-center align-items-center p-3 rounded-5"
+                    [ngClass]="isDarkMode ? 'shadow-dark' : 'shadow-light'">
+
+                    <p class="text-uppercase fw-bold text-center"
+                    [ngClass]="isDarkMode ? 'text-white' : 'text-black'">PERSONAL SOCIALS
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center p-1 gap-2 ">
+                        <button type="button" class="btn btn-outline-info border-0 "  [ngClass]="isDarkMode ? 'icon-shadow-dark' : 'icon-shadow-light'">
+                            <i class="bi bi-instagram fs-3 contact-icons"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-info border-0" [ngClass]="isDarkMode ? 'icon-shadow-dark' : 'icon-shadow-light'">
+                            <i class="bi bi-github fs-3 contact-icons"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-info border-0" [ngClass]="isDarkMode ? 'icon-shadow-dark' : 'icon-shadow-light'">
+                            <i class="bi bi-link-45deg fs-3 contact-icons"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-info border-0" [ngClass]="isDarkMode ? 'icon-shadow-dark' : 'icon-shadow-light'">
+                            <i class="bi bi-envelope-at-fill fs-3 contact-icons"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-info border-0" [ngClass]="isDarkMode ? 'icon-shadow-dark' : 'icon-shadow-light'">
+                            <i class="bi bi-dribbble fs-3 contact-icons"></i>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="col-sm-7 col-md-5 card border-0 bg-transparent justify-content-center align-items-center p-3 rounded-5"
+                    [ngClass]="isDarkMode ? 'shadow-dark' : 'shadow-light'" >
+
+                    <p class="text-uppercase fw-bold text-center" 
+                    [ngClass]="isDarkMode ? 'text-white' : 'text-black'">BUSINESS SOCIALS
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center p-1 gap-2 ">
+                        <button type="button" class="btn btn-outline-info border-0 " [ngClass]="isDarkMode ? 'icon-shadow-dark' : 'icon-shadow-light'">
+                            <i class="bi bi-instagram fs-3 contact-icons"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-info border-0" [ngClass]="isDarkMode ? 'icon-shadow-dark' : 'icon-shadow-light'">
+                            <i class="bi bi-envelope-at-fill fs-3 contact-icons"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-info border-0" [ngClass]="isDarkMode ? 'icon-shadow-dark' : 'icon-shadow-light'">
+                            <i class="bi bi-dribbble fs-3 contact-icons"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-info border-0" [ngClass]="isDarkMode ? 'icon-shadow-dark' : 'icon-shadow-light'">
+                            <i class="bi bi-youtube fs-3 contact-icons"></i>
+                        </button>
+                      
+                        <button type="button" class="btn btn-outline-info border-0" [ngClass]="isDarkMode ? 'icon-shadow-dark' : 'icon-shadow-light'">
+                            <i class="bi bi-pinterest fs-3 contact-icons"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-info border-0" [ngClass]="isDarkMode ? 'icon-shadow-dark' : 'icon-shadow-light'">
+                            <i class="bi bi-facebook fs-3 contact-icons"></i>
+                        </button>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+            <div class="col-sm-12 col-lg-5">
+                <form>
+                    <h2 class="text-center text-uppercase text-secondary fs-2 mt-3 ">LET'S TALK</h2>
+                    <div class="input-group-lg">
+                        <input type="text" name="name"
+                            class="bg-transparent form-control rounded-4 border-0  mb-3 fs-6 ps-4 p-3"
+                            placeholder="Enter Your Name..." [ngClass]="isDarkMode ? 'form-shadow-dark' : 'form-shadow-light'">
+                    </div>
+
+                    <div class="input-group-lg">
+                        <input type="email" name="email" placeholder="Enter Your Email..."
+                            class="bg-transparent form-control rounded-4 border-0  mb-3 fs-6 ps-4 p-3 "
+                            [ngClass]="isDarkMode ? 'form-shadow-dark' : 'form-shadow-light'">
+                    </div>
+
+
+                    <div class="input-group-lg">
+                        <textarea name="message" cols="10" rows="5" placeholder="Enter Your Message..." class="bg-transparent
+                             form-control rounded-4 border-0 mb-3 fs-6 ps-4 p-3 "
+                             [ngClass]="isDarkMode ? 'form-shadow-dark' : 'form-shadow-light'"></textarea>
+                    </div>
+
+                    <div class="d-flex flex-wrap justify-content-center text-center">
+                        <button type="submit" class=" btn btn-lg btn-dark rounded-0 text-center mt-2">SUBMIT</button>
+                    </div>
+
+                </form>
+
+
+            </div>
+
+        </div>
+    </div>
+</section>

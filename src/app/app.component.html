@@ -1,0 +1,116 @@
+<nav class="navbar navbar-expand-lg position-fixed w-100"
+  style="background: rgba(0, 0, 0, 0);backdrop-filter: blur(7px); z-index: 1;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../assets/logo_black.png" alt="Logo" class="logo" *ngIf="!isDarkMode">
+      <img src="../assets/logo_white.png" alt="Logo" class="logo" *ngIf="isDarkMode">
+    </a>
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <button class="border-0 navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
+      aria-controls="navbarOffcanvasLg"  [ngClass]="isDarkMode ? 'text-white' : 'text-black'">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="offcanvas offcanvas-end" [ngClass]="isDarkMode ? 'bg-dark' : 'bg-light'" tabindex="-1"
+      id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel" style="height: max-content;">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+        <button type="button" class="btn-close text-end" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="d-flex offcanvas-body text-center">
+        <ul class=" justify-content-end flex-grow-1 pe-3" [@dropDownAnimation]>
+          <div class="navbar-nav justify-content-end column-gap-4">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="" routerLink="/home" routerLinkActive="active"
+                [ngStyle]="{'color': isDarkMode ? '#fff' : '#000'}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="" routerLink="/services" routerLinkActive="active"
+                [ngStyle]="{'color': isDarkMode ? '#fff' : '#000'}">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="" routerLink="/projects" routerLinkActive="active"
+                [ngStyle]="{'color': isDarkMode ? '#fff' : '#000'}">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="" routerLink="/about-me" routerLinkActive="active"
+                [ngStyle]="{'color': isDarkMode ? '#fff' : '#000'}">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="" routerLink="/contact-me" routerLinkActive="active"
+                [ngStyle]="{'color': isDarkMode ? '#fff' : '#000'}">Contact Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" [ngStyle]="{'color': isDarkMode ? '#fff' : '#000'}">
+                <!-- <i class="bi bi-moon-fill" ></i>
+              <i class="bi bi-sun-fill"></i> -->
+                <i class="theme-toggle-icon" [ngClass]="{'bi bi-sun-fill': !isDarkMode, 'bi bi-moon-fill': isDarkMode}"
+                  (click)="toggleMode()"></i>
+                <!-- <i [ngClass]="iconClass"></i> -->
+              </a>
+            </li>
+
+          </div>
+        </ul>
+
+      </div>
+
+
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+
+<!-- Footer -->
+<section class="w-100 footer radical-background4">
+  <div class="d-lg-flex  d-sm-block justify-content-around px-4">
+
+    <div class="d-flex flex-column align-items-start gap-3">
+      <img src="../../assets/logo_black.png" alt="Logo" class="logo-footer" *ngIf="!isDarkMode">
+      <img src="../../assets/logo_white.png" alt="Logo" class="logo-footer" *ngIf="isDarkMode">
+
+      <p>Crafting Digital Experiences, One Line of Code at a Time</p>
+      <div class="d-flex flex-wrap justify-content-between gap-4">
+        <a class="footer-icon" href=""><i class="bi bi-instagram"></i></a>
+        <a class="footer-icon" href=""><i class="bi bi-twitter"></i></a>
+        <a class="footer-icon" href=""><i class="bi bi-link"></i></a>
+        <a class="footer-icon" href=""><i class="bi bi-envelope-at-fill"></i></a>
+        <a class="footer-icon" href=""><i class="bi bi-github"></i></a>
+
+      </div>
+
+      <button class="btn btn-lg btn-footer text-white border-0 ">Book a free call with me</button>
+    </div>
+
+    <div class="d-flex gap-3 mt-3 justify-content-around">
+      <div class="column">
+        <h3>Links</h3><a class="text-decoration-none text-secondary" href="/">
+          <p>Home</p>
+        </a><a class="text-decoration-none text-secondary" href="/services">
+          <p>Services</p>
+        </a><a class="text-decoration-none text-secondary" href="/projects">
+          <p>Projects</p>
+        </a><a class="text-decoration-none text-secondary" href="/about-me">
+          <p>About Me</p>
+        </a><a class="text-decoration-none text-secondary" href="/contact-me">
+          <p>Contact Me</p>
+        </a>
+      </div>
+
+      <div class="column">
+        <h3>Contact</h3>
+        <p>+383 45 209 534</p>
+        <p>tahiriamir49@gmail.com</p>
+        <p>amirisites@gmail.com</p>
+        <p>Amir Tahiri</p>
+      </div>
+
+
+    </div>
+
+  </div>
+</section>

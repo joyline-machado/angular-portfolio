@@ -1,0 +1,311 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@900&display=swap');
+
+body {
+    transition: background-color 0.3s ease;
+  }
+
+body.dark-mode {
+    background-color: #000000 !important;
+    color: #fff;
+  }
+
+$blue : #4fc0d6;
+$green : rgb(40, 184, 40);
+$black : hsl(0, 0%, 0%);
+$text-gray:#bebebe;
+$gray: #979797;
+$gray2: #7a7a7a;
+
+$gradient-background_1 : linear-gradient(109.6deg, rgba(150, 50, 189, .753) 11.2%, #e9877a 100.2%);
+
+$gradient-color : linear-gradient(109.6deg, #e9877a 11.2%, rgba(150, 50, 189, .753) 100.2%);
+
+$radical-gradient: radial-gradient(circle at 90% 45%,#97c6f8 2%,#fff0 25%);
+
+@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) {
+        @content;
+    }
+}
+
+body {
+    font-family: Poppins, sans-serif !important;
+
+    @include for-phone-only() {
+        // margin-left: 5%;
+        width: 100%;
+    }
+}
+
+.radical-background1{
+    background: $radical-gradient;
+}
+.radical-background2{
+    background: radial-gradient(circle at 12% 60%,#a1c7f0 2%,#fff0 13%);
+}
+.radical-background3{
+    background: radial-gradient(circle at 90% 58%,#a4caf0 2%,#fff0 13%);
+}
+
+.radical-background4{
+    background: radial-gradient(circle at 90% 58%, #197adb87 2%, rgba(255, 255, 255, 0) 13%)
+}
+
+.radical-background5{
+    background: radial-gradient(circle at 10% 45%,#88bbf1 2%,#fff0 25%)
+}
+
+
+.primary {
+    color: $blue !important;
+
+}
+
+.bg-primary {
+    background-color: $blue !important;
+}
+
+h5 {
+    font-family: Comfortaa, cursive;
+}
+
+h2,
+p {
+    font-family: Poppins, sans-serif !important;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.gradient-text {
+    font-weight: 700 !important;
+    font-size: 35px;
+    font-family: Comfortaa, cursive !important;
+    background-image: $gradient-background_1 !important;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+    @include for-phone-only() {
+        font-size: 23px;
+    }
+}
+
+.gradient-text2{
+    background-image: linear-gradient(109.6deg, #e9877a 11.2%, rgba(150, 50, 189, .753) 100.2%) !important;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+h1 {
+
+    .name-text {
+        font-size: 6rem;
+        font-weight: 900;
+        line-height: 1em;
+        font-family: Montserrat, sans-serif;
+        display: block;
+
+        @include for-phone-only() {
+            font-size: 3.7rem;
+        }
+
+        @include for-tablet-portrait-up() {
+            font-weight: 3.7 rem;
+        }
+
+        @include for-desktop-up() {
+            font-size: 6rem;
+        }
+    }
+
+
+}
+
+title {
+    font-weight: 600 !important;
+    font-family: Comfortaa, cursive !important;
+    color: #df8187;
+}
+
+.active {
+    color: $blue !important;
+    font-weight: 600;
+}
+
+.active-tab {
+    color: $blue !important;
+}
+
+
+// Padding
+.padding {
+    padding: 7% 3%;
+
+    @include for-phone-only() {
+        padding: 20% 3%;
+    }
+
+    @include for-tablet-portrait-up() {
+        font-weight: 2.3 rem;
+    }
+
+    @include for-desktop-up() {
+        font-size: 6rem;
+    }
+}
+
+// Skills
+.skills {
+    color: $green;
+}
+
+.skills-progress {
+    background-color: $green !important;
+}
+
+// footer
+.footer {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    box-shadow: 0 0 7px 1px $gray;
+
+    .logo-footer {
+        width: 175px;
+        @include for-desktop-up() {
+            width: 200px;
+        }
+
+
+
+    }
+
+    .btn-footer {
+        background-color: $blue;
+    }
+
+    .footer-icon {
+        color: $blue;
+        font-size: 25px;
+    }
+
+    .footer-icon:hover {
+        color: $black;
+        transition: ease;
+        transform: scale(1.1);
+    }
+}
+
+.dark-mode{
+    .footer{
+        .footer-icon {
+            color: $blue;
+            font-size: 25px;
+        }
+    
+        .footer-icon:hover {
+            color: #fff;
+            transition: ease;
+            transform: scale(1.1);
+        }
+    }
+}
+
+// Button
+
+.btn-bottom-line{
+    border-bottom: solid black 2px;
+}
+
+.btn-bottom-line:hover{
+    border-bottom: solid black 2px;
+    background-color: #dadada;
+}
+
+.btn-blue-glow{
+    background-color: $blue;
+}
+
+.btn-blue-glow:hover{
+    background-color: $blue;
+    box-shadow: 0 0 7px 2px $blue;
+}
+
+.btn-projects{
+    border-bottom: 2px solid $gray2;
+    color: $gray2;
+}
+.btn-projects:hover{
+    border-bottom: 2px solid $blue;
+    color: $blue;
+}
+
+// Image
+.img-hover{
+    transition: all 0.4s ease 0s;
+}
+.img-hover:hover{
+    box-shadow: 0 0 15px 3px $gray !important;
+}
+
+
+// Shadow
+.shadow-light{
+    box-shadow: 12px 12px 19px #d8d8d8, -12px -12px 19px #ececec;
+}
+.shadow-dark{
+    box-shadow: 12px 12px 19px #0c243f52, -12px -12px 19px #040b16;;
+}
+
+// contct form shadow
+
+.form-shadow-light{
+   box-shadow:  7px 7px 12px #d8d8d8, -4px -4px 12px #ececec;
+  
+}
+
+.form-shadow-dark{
+    box-shadow: 7px 7px 12px #0c243f52, -4px -4px 12px #040b16;
+    color: #fff !important;
+}
+
+.form-shadow-dark::placeholder{
+    color: $text-gray;
+}
+
+.icon-shadow-light{
+    box-shadow: 0 0 12px 1px #979797;
+}
+.icon-shadow-dark{
+    box-shadow: 0 0 12px 1px #2163aaf3;
+}

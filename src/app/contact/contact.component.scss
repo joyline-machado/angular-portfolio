@@ -1,0 +1,19 @@
+$blue : #4fc0d6;
+$green : rgb(40, 184, 40);
+$black : hsl(0, 0%, 0%);
+$gray: #979797;
+
+p {
+    span{
+        color: $blue;
+    }
+}
+p{
+    i{
+        color: $blue;
+    }
+}
+
+.contact-icons:hover{
+    color: #fff;
+}

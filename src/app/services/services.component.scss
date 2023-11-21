@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+$dark : #383838;
+$blue : #4fc0d6;
+
+@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) {
+        @content;
+    }
+}
+
+
+.service-title {
+    font-family: Montserrat, cursive !important;
+    font-size: 3rem;
+    font-weight: 600;
+
+    @include for-phone-only(){
+        font-size: 1.5rem;  
+    }
+
+    @include for-tablet-portrait-up(){
+        font-size: 2.5rem; 
+    }
+
+    @include for-desktop-up(){
+        font-size: 3rem;
+    }
+}
+
+.single-service-title{
+    font-family: Montserrat, cursive !important;
+    font-weight: 600;
+}
+
+.service-description{
+    font-family: Comfortaa, cursive !important;
+}
+
+.btn-service{
+    background-color: $dark;
+}
+.btn-service:hover{
+    background-color: $blue;
+}
+
+.badge-service{
+    background-color: #dadada;
+    font-family: Comfortaa, cursive !important; 
+}
+.badge-service-dark{
+    background-color: #000000;
+    font-family: Comfortaa, cursive !important; 
+}
+
+
+
+.single-service{
+    height: 80vh;
+    backdrop-filter: blur(20px);
+
+    @include for-phone-only(){
+        height: auto;
+    }
+
+    @include for-tablet-portrait-up(){
+        height: auto;
+    }
+
+    @include for-tablet-landscape-up(){
+        height: auto;
+    }
+    @include for-desktop-up(){
+        height: 80vh;
+    }
+}

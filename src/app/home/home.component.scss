@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+$blue : #4fc0d6;
+$green : rgb(40, 184, 40);
+
+@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) {
+        @content;
+    }
+}
+
+.home-img {
+    width: 100%;
+    object-fit: cover;
+
+    @include for-phone-only {
+        width: 90%;
+    }
+
+    @include for-tablet-portrait-up {
+        width: 90%;
+    }
+
+    @include for-tablet-landscape-up {
+        width: 100%;
+    }
+
+    @include for-desktop-up {
+        width: 100%;
+    }
+}
+
+.home-part1 {
+    text-align: left;
+
+    @include for-phone-only {
+        text-align: center;
+    }
+
+    @include for-tablet-portrait-up {
+        text-align: center;
+    }
+
+    @include for-tablet-landscape-up {
+        text-align: center;
+    }
+
+    @include for-desktop-up {
+        text-align: left;
+    }
+}
+
+// services
+.services-img {
+    width: 100px;
+}
+
+.services-title {
+    font-size: 2.7rem;
+    line-height: 1.1em;
+    font-weight: 400;
+    font-family: Comfortaa, cursive;
+
+}
+
+.home-service-title{
+    font-weight: 800;
+    font-family: Comfortaa, cursive !important;
+}
+// skills
+.skills-img {
+    width: 100%;
+    max-width: 600px;
+
+
+}
+
+// progress
+.progress {
+    width: 50%;
+
+    @include for-phone-only() {
+        width: 85%;
+    }
+
+}
+
+// Tech
+.tech {
+    padding-right: 17%;
+    padding-left: 17%;
+
+    @include for-phone-only() {
+        padding-right: 7%;
+        padding-left: 7%;
+    }
+
+    @include for-tablet-portrait-up() {
+        padding-right: 7%;
+        padding-left: 7%;
+    }
+
+    @include for-tablet-landscape-up() {
+        padding-right: 7%;
+        padding-left: 7%;
+    }
+
+    @include for-desktop-up() {
+        padding-right: 17%;
+        padding-left: 17%;
+    }
+
+    .icon-gap {
+        gap: 7rem;
+
+        @include for-phone-only() {
+            gap: 2.5rem;
+        }
+
+        @include for-tablet-portrait-up() {
+            gap: 3rem;
+        }
+
+        @include for-tablet-landscape-up() {
+            gap: 6rem;
+        }
+
+        @include for-desktop-up() {
+            gap: 7rem;
+        }
+
+        @include for-big-desktop-up() {
+            gap: 7rem;
+        }
+    }
+
+    .tech-icon {
+        height: 70px;
+
+        @include for-phone-only() {
+            height: 52px;
+        }
+
+        @include for-tablet-portrait-up() {
+            height: 70px;
+        }
+    }
+}
+
+// UI Service
+.ui-service-img{
+    width: 70px;
+}
+
+.ui-service-card{
+    gap: 10px;
+    transition: all 0.3s ease 0s;
+}
+.ui-service-card:hover{
+    box-shadow: 0 0 12px 2px #d8d8d8;
+}
+
+// FAQ
+.faq-accordation-title{
+    color: $blue;
+    font-weight: 500;
+    font-size: 24px;
+    font-family: Poppins, sans-serif;
+
+    @include for-phone-only(){
+        font-size: 20px;
+    }
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #fff !important;
+}
+
+.accordation {
+    --bs-accordion-btn-focus-box-shadow: none !important;
+}
+
+// Quotes
+.quotes-title{
+    font-size:  3rem !important;
+    font-weight: 600 !important;
+    font-family: Poppins,sans-serif !important;
+    padding-left: 33px;
+
+    @include for-phone-only(){
+        font-size:  1.8rem !important;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    @include for-tablet-portrait-up(){
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    @include for-desktop-up(){
+        padding-left: 35px;
+        padding-right: 25px;
+    }
+}
+
+p {
+    span{
+        color: $blue;
+    }
+}
+p{
+    i{
+        color: $blue;
+    }
+}
+
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent !important;
+}
+
+.contact-icons:hover{
+    color: #fff;
+}
