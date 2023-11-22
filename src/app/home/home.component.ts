@@ -1,5 +1,5 @@
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../theme.service';
 // import AOS from 'aos';
 import * as AOS from 'aos';
