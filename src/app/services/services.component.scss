@@ -83,13 +83,16 @@ $blue : #4fc0d6;
 .single-service{
     height: 80vh;
     backdrop-filter: blur(20px);
+    // background-color: #ffffff9c;
 
     @include for-phone-only(){
         height: auto;
+        top: 4rem;
     }
 
     @include for-tablet-portrait-up(){
         height: auto;
+        top: 4rem;
     }
 
     @include for-tablet-landscape-up(){
@@ -97,5 +100,6 @@ $blue : #4fc0d6;
     }
     @include for-desktop-up(){
         height: 80vh;
+        top: 6rem;
     }
 }
